@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Block Tax Season Harvest 2024</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #adff2f;
+        }
+        #blockTaxSystem {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            background-color: #000;
+            min-height: 100vh;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #adff2f;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            line-height: 1.2;
+        }
+        .date, .subheader {
+            background-color: #1a1a1a;
+            padding: 5px;
+            text-align: center;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .value-display {
+            background-color: #adff2f;
+            color: #000;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .label {
+            display: flex;
+            align-items: center;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        .value {
+            background-color: #adff2f;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        input[type="time"] {
+            background-color: #1a1a1a;
+            color: #adff2f;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        button {
+            background-color: #adff2f;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .motivation, .news {
+            background-color: #1a1a1a;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .motivation-title, .news-title {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .motivation-text, .news-text {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="blockTaxSystem">
+        <div class="header">BLOCK TAX SEASON<br>HARVEST 2024</div>
+        <div class="date" id="currentDate"></div>
+        <div class="subheader">Minutes Left in Tax Harvest</div>
+        <div class="value-display" id="countdownTime"></div>
+        <div class="section">
+            <div class="label"><span class="icon">⚡</span>1440TIME</div>
+            <div class="value" id="1440Time"></div>
+        </div>
+        <div class="section">
+            <div class="label"><span class="icon">⏱️</span>BLOCK TIME</div>
+            <div>
+                <input type="time" id="startTime" required>
+                <input type="time" id="endTime" required>
+                <button onclick="updateBlockTime()">Set</button>
+            </div>
+        </div>
+        <div class="section">
+            <div id="blockTimeDisplay">Set work hours</div>
+            <div class="value" id="blockTime">-</div>
+        </div>
+        <div class="motivation">
+            <div class="motivation-title">Daily Motivation</div>
+            <div id="quoteText" class="motivation-text"></div>
+        </div>
+        <div class="news">
+            <div class="news-title">Latest IRS News</div>
+            <div id="irsNews" class="news-text">Unable to fetch news</div>
+        </div>
+    </div>
+    <script>
+        // ... (The JavaScript remains the same as in the previous version)
+    </script>
+</body>
+</html>
